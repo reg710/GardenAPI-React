@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Should I Water My Garden Today?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a personal project I started after graduating from Academy PGH. My goals are to:
+* Build an easy way to figure out if I need to water my garden today
+* Get more experience working with React and APIs
 
-## Available Scripts
+A user can enter the zip code of their garden's location and quickly see a message telling them whether or not it's time to get out that watering can. That decision will be based on how much precipation there has been over the past three days, which will be information pulled from RapidAPI's WeatherAPI. The user will also be able to say whether or not they watered yesterday, and this will update the answer they see accordingly.
 
-In the project directory, you can run:
 
-### `yarn start`
+## To Do
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [x] Find API with historical weather information, specifically precipitation data
+- [ ] Make sure API key is stored correctly so that it isn't being shared accidentally
+- [ ] Build forecast component to be used to render weather information for testing
+- [ ] Practice axios requests using button to make request
+- [ ] Once I'm able to get the JSON, make sure I can parse it to return the rain information needed
+- [ ] Check and ensure that you are getting three days worth of information, not just one
+- [ ] Modify hardcoded query parameters that are being used for testing, to enable user to input their own zipcode
+- [ ] Modify hardcoded date parameters so that it will always be 'past three days' not a set date
+- [ ] Create input text box for user's zipcode
+- [ ] Learn about deploying and then get it up and going
