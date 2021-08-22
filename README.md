@@ -9,8 +9,9 @@ A user will be able tp enter the zip code of their garden's location and quickly
 ## To Do
 
 - [x] Find API with historical weather information, specifically precipitation data
-- [ ] Make sure API key is stored correctly so that it isn't being shared accidentally
-- [ ] Build forecast component to be used to render weather information for testing
+- [x] Make sure API key is stored as an enviroment variable so that it isn't being shared accidentally
+- [x] Build basic forecast component to be used to render weather information for testing
+- [x] Add axios to be able to make requests of weather API
 - [ ] Practice axios requests using button to make request
 - [ ] Once I'm able to get the JSON, make sure I can parse it to return the rain information needed
 - [ ] Check and ensure that you are getting three days worth of information, not just one
