@@ -4,8 +4,7 @@ This is a personal project I started after graduating from Academy PGH. My goals
 * Build an easy way to figure out if I need to water my garden today
 * Get more experience working with React and APIs
 
-A user can enter the zip code of their garden's location and quickly see a message telling them whether or not it's time to get out that watering can. That decision will be based on how much precipation there has been over the past three days, which will be information pulled from RapidAPI's WeatherAPI. The user will also be able to say whether or not they watered yesterday, and this will update the answer they see accordingly.
-
+A user will be able tp enter the zip code of their garden's location and quickly see a message telling them whether or not it's time to get out that watering can. That decision will be based on how much precipation there has been over the past three days, which will be information pulled from RapidAPI's WeatherAPI. 
 
 ## To Do
 
