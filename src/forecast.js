@@ -6,6 +6,7 @@ import Axios from 'axios';
 // Not sure if this is the usual place to store this information
 const API_KEY = process.env.REACT_APP_API_KEY;
 
+// Need to figure out how to make params changeable by input field on page
 const options = {
     method: 'GET',
     url: 'https://weatherapi-com.p.rapidapi.com/history.json',
@@ -23,25 +24,29 @@ class Forecast extends React.Component {
         
         this.state = {
             test: "I'm here, don't worry",
-            weather_history: [],
+            yesterday_rain: 0,
         };
 
         // Need to include this bind so the runAxios function works
         this.runAxios = this.runAxios.bind(this);
     }
 
+    componentDidMount() {
+        this.runAxios();
+      }
+
     runAxios() {
         Axios.request(options)
         .then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             this.setState({
-               weather_history: response.data.forecast.forecastday
+               yesterday_rain: response.data.forecast.forecastday[0].day.totalprecip_mm,
             });
         }).catch(function (error) {
             console.error(error);
         });
 
-        console.log(this.state.weather_history)
+        console.log(this.state.yesterday_rain)
     }
 
     render() {
@@ -49,6 +54,7 @@ class Forecast extends React.Component {
             <div>
                 Hello World! {this.state.test} 
                 <button onClick={this.runAxios}>Checking that API!</button>
+                {this.state.yesterday_rain}
             </div>
         );
     }
