@@ -4,7 +4,7 @@ import Forecast from './forecast.js';
 function App() {
   return (
     <div>
-    <Forecast/>
+      <Forecast/>
     </div>
   );
 }

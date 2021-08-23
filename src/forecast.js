@@ -6,8 +6,6 @@ import Axios from 'axios';
 // Not sure if this is the usual place to store this information
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-// Need to figure out how to make params changeable by input field on page
-
 
 class Forecast extends React.Component {
     // function that allows me to set up state
@@ -15,7 +13,6 @@ class Forecast extends React.Component {
         super(props);
         
         this.state = {
-            test: "I'm here, don't worry",
             yesterday_rain: 0,
         };
 
@@ -80,16 +77,17 @@ class Forecast extends React.Component {
         }).catch((error) => {
             console.error(error);
         });
-
-        console.log(this.state.yesterday_rain)
     }
 
     render() {
         return (
-            <div>
-                Hello World! {this.state.test} 
-                <button onClick={this.runAxios}>Checking that API!</button>
-                {this.state.yesterday_rain}
+            <div class="container">
+                <button onClick={this.runAxios}>
+                    How much did it rain yesterday?
+                </button>
+                <div>
+                    <p>This much: {this.state.yesterday_rain}mm</p>
+                </div>                  
             </div>
         );
     }
