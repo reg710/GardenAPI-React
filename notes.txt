@@ -1,0 +1,2 @@
+- The weather API I'm using only allows one day per response, so if I want to stick with this one I'll need to make a separate call for each day
+- Maybe to start small, only base watering on if it rained yesterday or not

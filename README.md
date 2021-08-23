@@ -12,10 +12,13 @@ A user will be able tp enter the zip code of their garden's location and quickly
 - [x] Make sure API key is stored as an enviroment variable so that it isn't being shared accidentally
 - [x] Build basic forecast component to be used to render weather information for testing
 - [x] Add axios to be able to make requests of weather API
-- [ ] Practice axios requests using button to make request
-- [ ] Once I'm able to get the JSON, make sure I can parse it to return the rain information needed
-- [ ] Check and ensure that you are getting three days worth of information, not just one
+- [x] Practice axios requests using button to make request
+- [x] Once I'm able to get the JSON, make sure I can parse it to return the rain information needed
+- [x] Check and ensure that you are getting three days worth of information, not just one -- Current API selection only returns one day for free version. I may need to either make three calls for three dates or find an alternative API with option to return a date range
+- [x] Find a way to set yesterday's date to a variable
+- [ ] Style the page up a bit
+- [ ] Build rainfall logic - how much over past three days before you won't need to water
+- [ ] Create input text box for user's zipcode
 - [ ] Modify hardcoded query parameters that are being used for testing, to enable user to input their own zipcode
 - [ ] Modify hardcoded date parameters so that it will always be 'past three days' not a set date
-- [ ] Create input text box for user's zipcode
 - [ ] Learn about deploying and then get it up and going
