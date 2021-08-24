@@ -17,6 +17,7 @@ A user will be able tp enter the zip code of their garden's location and quickly
 - [x] Check and ensure that you are getting three days worth of information, not just one -- Current API selection only returns one day for free version. I may need to either make three calls for three dates or find an alternative API with option to return a date range
 - [x] Find a way to set yesterday's date to a variable
 - [ ] Style the page up a bit
+- [ ] Find a way to do three separate calls to the API
 - [ ] Build rainfall logic - how much over past three days before you won't need to water
 - [ ] Create input text box for user's zipcode
 - [ ] Modify hardcoded query parameters that are being used for testing, to enable user to input their own zipcode
