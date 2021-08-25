@@ -4,12 +4,12 @@ This is a personal project I started after graduating from Academy PGH. My goals
 * Build an easy way to figure out if I need to water my garden today
 * Get more experience working with React and APIs
 
-A user will be able tp enter the zip code of their garden's location and quickly see a message telling them whether or not it's time to get out that watering can. That decision will be based on how much precipation there has been over the past three days, which will be information pulled from RapidAPI's WeatherAPI. 
+A user will be able to enter the zip code of their garden's location and quickly see a message telling them whether or not it's time to get out that watering can. That decision will be based on how much precipitation there has been over the past three days, which will be information pulled from RapidAPI's WeatherAPI. 
 
 ## To Do
 
 - [x] Find API with historical weather information, specifically precipitation data
-- [x] Make sure API key is stored as an enviroment variable so that it isn't being shared accidentally
+- [x] Make sure API key is stored as an environment variable so that it isn't being shared accidentally
 - [x] Build basic forecast component to be used to render weather information for testing
 - [x] Add axios to be able to make requests of weather API
 - [x] Practice axios requests using button to make request
@@ -20,6 +20,5 @@ A user will be able tp enter the zip code of their garden's location and quickly
 - [ ] Find a way to do three separate calls to the API
 - [ ] Build rainfall logic - how much over past three days before you won't need to water
 - [ ] Create input text box for user's zipcode
-- [ ] Modify hardcoded query parameters that are being used for testing, to enable user to input their own zipcode
-- [ ] Modify hardcoded date parameters so that it will always be 'past three days' not a set date
+- [ ] Have params update to match user zipcode and make new request
 - [ ] Learn about deploying and then get it up and going
