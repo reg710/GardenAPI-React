@@ -6,7 +6,6 @@ import Axios from 'axios';
 // Not sure if this is the usual place to store this information
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-
 class Forecast extends React.Component {
     // function that allows me to set up state
     constructor(props) {
@@ -14,6 +13,7 @@ class Forecast extends React.Component {
         
         this.state = {
             yesterday_rain: 0,
+            two_days_ago_rain: 0,
         };
 
         // Need to include this bind so the runAxios function works
@@ -47,16 +47,14 @@ class Forecast extends React.Component {
         };
 
         let y_full_date = `${y_year}-${y_month}-${y_date}`
-        
 
         // Debugging checks on date formatting
-        // console.log(`today: ${today.toDateString()}`);
-        // console.log(`yesterday: ${yesterday.toDateString()}`);
-        // console.log(y_year);
-        // console.log(y_month);
-        // console.log(y_date);
-        // console.log(y_full_date);
-
+        console.log(`today: ${today.toDateString()}`);
+        console.log(`yesterday: ${yesterday.toDateString()}`);
+        console.log(y_year);
+        console.log(y_month);
+        console.log(y_date);
+        console.log(y_full_date);
 
         const options = {
             method: 'GET',
@@ -81,12 +79,20 @@ class Forecast extends React.Component {
 
     render() {
         return (
-            <div class="container">
-                <button onClick={this.runAxios}>
+            <div class="bucket">
+                <div class ="location">
+                    TBD - Where's the garden
+                </div>
+
+                <button class="water" onClick={this.runAxios}>
                     How much did it rain yesterday?
                 </button>
-                <div>
-                    <p>This much: {this.state.yesterday_rain}mm</p>
+
+                <div class="response">
+                    TBD - Yes, Maybe, No
+                </div>
+                <div class="details">
+                    This much: {this.state.yesterday_rain}mm
                 </div>                  
             </div>
         );

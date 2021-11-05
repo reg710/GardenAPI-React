@@ -1,4 +1,4 @@
-
+/* 
 .container {
     background-color: #063970;
     min-height: 100vh;
@@ -8,4 +8,45 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: #ffe4c2;
+} */
+body {
+    background-color: wheat;
+    margin-top: 3em;
+}
+
+div {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+}
+/* Holds everything inside itself */
+.bucket {
+    background-color: aquamarine;
+    border: 1px solid tomato;
+    height: 80vh;
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.location {
+    background-color: lightgrey;
+    border: 1px solid black;
+}
+
+.water {
+    background-color: darkgrey;
+    border: 1px solid blue;
+}
+
+.response {
+    background-color: lightgrey;
+    border: 1px solid black;
+}
+
+.details {
+    background-color: darkgrey;
+    border: 1px solid blue;
 }

@@ -2,13 +2,14 @@
 - Maybe to start small, only base watering on if it rained yesterday or not
 - Can I make three calls in one function by having separate parameter consts, one for each date I'm checking?
 
-
-
 Here's some rule of thumb on garden watering taken from 
 
 "The general rule of thumb is that most vegetables need about an inch (25mm) of water a week. This doesn’t take account of soil type though, so if you have a clay soil that holds onto moisture, you’ll probably need a little less, while a free-draining sandy soil may need more.
 
 How much also depends on the average daily temperature, worked out by adding together the daytime high and low then dividing by two. The inch-per-week rule is based on a comfortable daily average of around 15°C (60°F). Warmer averages mean more water to the tune of an additional half-inch (13mm) with every rise of 6°C (10°F). You can appreciate why gardeners in hot climates must water considerably more than those lurking in the cooling murk of a maritime climate such as Britain or the Pacific Northwest! "
+
+
+- Setting the three date variables in the runAxios function doesn't seem like the best way to do this. Can I have a fucntion somehwere else that would return dates and be used by runAxios?
 
 
 
