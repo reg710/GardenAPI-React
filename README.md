@@ -19,6 +19,7 @@ A user will be able to enter the zip code of their garden's location and quickly
 - [ ] Style the page up a bit
 - [ ] Find a way to do three separate calls to the API
 - [ ] Build rainfall logic - how much over past three days before you won't need to water
-- [ ] Create input text box for user's zipcode
-- [ ] Have params update to match user zipcode and make new request
+- [x] Create input text box for user's zipcode
+- [x] Have params update to match user zipcode and make new request
+- [ ] Find way to validate user's input and/or display error message in user friendly way if no results found with provided input
 - [ ] Learn about deploying and then get it up and going

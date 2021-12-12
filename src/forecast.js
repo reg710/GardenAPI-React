@@ -14,10 +14,12 @@ class Forecast extends React.Component {
         this.state = {
             yesterday_rain: 0,
             two_days_ago_rain: 0,
+            zip: ""
         };
 
         // Need to include this bind so the runAxios function works
         this.runAxios = this.runAxios.bind(this);
+        this.updateText = this.updateText.bind(this);
     }
 
     // Commented out for the moment so I don't keep making API calls every time it renders
@@ -48,18 +50,10 @@ class Forecast extends React.Component {
 
         let y_full_date = `${y_year}-${y_month}-${y_date}`
 
-        // Debugging checks on date formatting
-        console.log(`today: ${today.toDateString()}`);
-        console.log(`yesterday: ${yesterday.toDateString()}`);
-        console.log(y_year);
-        console.log(y_month);
-        console.log(y_date);
-        console.log(y_full_date);
-
         const options = {
             method: 'GET',
             url: 'https://weatherapi-com.p.rapidapi.com/history.json',
-            params: {q: '15201', dt: `${y_full_date}`, lang: 'en'},
+            params: {q: `${this.state.zip}`, dt: `${y_full_date}`, lang: 'en'},
             headers: {
               'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
               'x-rapidapi-key': `${API_KEY}`
@@ -74,7 +68,13 @@ class Forecast extends React.Component {
             });
         }).catch((error) => {
             console.error(error);
+            this.setState({display_error: error})
         });
+    }
+
+    updateText(event)
+    {
+      this.setState({zip: event.target.value});
     }
 
     render() {
@@ -82,6 +82,10 @@ class Forecast extends React.Component {
             <div class="bucket">
                 <div class ="location">
                     TBD - Where's the garden
+                    <div>
+                        <input type="text" value={this.state.zip} onChange={this.updateText} />
+                    </div>
+                    <div>{this.state.zip}</div>   
                 </div>
 
                 <button class="water" onClick={this.runAxios}>
